@@ -37,3 +37,17 @@ For your convenience, we provide the `rank_all_dms.sh` script to run the benchma
 ```bash
 bash rank_all_dms.sh
 ```
+
+# Citation
+
+If our work has been of assistance to your work, please cite our paper as :  
+
+```
+@article{he2024protein,
+  title={Protein language models-assisted optimization of a uracil-N-glycosylase variant enables programmable T-to-G and T-to-C base editing},
+  author={He, Yan and Zhou, Xibin and Chang, Chong and Chen, Ge and Liu, Weikuan and Li, Geng and Fan, Xiaoqi and Sun, Mingsun and Miao, Chensi and Huang, Qianyue and others},
+  journal={Molecular Cell},
+  year={2024},
+  publisher={Elsevier}
+}
+```
