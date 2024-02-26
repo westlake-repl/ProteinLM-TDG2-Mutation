@@ -1,6 +1,8 @@
 # ProteinLM-TDG2-Mutation
 
-paper code：Protein language models-assisted optimization of a uracil-N-glycosylase variant enables programmable T-to-G and T-to-C base editing
+Code for paper: 📖**Protein language models-assisted optimization of a uracil-N-glycosylase variant enables programmable T-to-G and T-to-C base editing**
+
+DOI: 🔗[https://doi.org/10.1016/j.molcel.2024.01.021](https://doi.org/10.1016/j.molcel.2024.01.021)
 
 ## Install enviroment
 
