@@ -6,11 +6,9 @@ DOI: 🔗[https://doi.org/10.1016/j.molcel.2024.01.021](https://doi.org/10.1016/
 
 ## Install enviroment
 
-Install the conda environment with the following command:
+Install the conda environment refering to the `env.sh` script. 
 
-```bash
-bash env.sh
-```
+That is, DONNOT run the `env.sh` script directly. Instead, copy the commands in the `env.sh` script and run them in your terminal.
 
 ## Create single mutations
 

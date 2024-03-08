@@ -1,3 +1,4 @@
+# DONNOT run the file directly. Instead, run the following command line by line in the terminal.
 conda create -n TDG2 python=3.9 -y
 conda activate TDG2
 conda install numpy biopython tqdm pandas matplotlib seaborn -y
