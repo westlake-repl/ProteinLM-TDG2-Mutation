@@ -49,8 +49,13 @@ def main(args):
     
     print("loading model", flush=True)
     if args.checkpoint is None:
-        model_name = Path("/path/to/esm/models/"+args.model_name+".pt")
-        model, alphabet = esm.pretrained.load_model_and_alphabet(str(model_name))
+        try:
+            model_name = Path("/path/to/esm/models/"+args.model_name+".pt")
+            model, alphabet = esm.pretrained.load_model_and_alphabet(str(model_name))
+        except:
+            model_name = Path("/path/to/huggingface/models/"+args.model_name)
+            model = EsmForMaskedLM.from_pretrained(model_name)
+            alphabet = AutoTokenizer.from_pretrained(model_name)
     else:
         model_name = Path("/path/to/huggingface/models/"+args.model_name)
         model = EsmForMaskedLM.from_pretrained(model_name)

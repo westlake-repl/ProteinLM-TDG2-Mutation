@@ -8,7 +8,32 @@ DOI: 🔗[https://doi.org/10.1016/j.molcel.2024.01.021](https://doi.org/10.1016/
 
 Install the conda environment refering to the `env.sh` script. 
 
-That is, DONNOT run the `env.sh` script directly. Instead, copy the commands in the `env.sh` script and run them in your terminal.
+**Note that**, *DONNOT* run the `env.sh` script directly. Instead, copy the commands in the `env.sh` script and run them in your terminal.
+
+## Download ESM series models
+
+You can download the ESM series models from the [huggingface model hub](https://huggingface.co) by searching `facebook/model_name` in the search bar.
+
+Available models include:
+
+| Model name | link |
+| --- | --- |
+| esm1b_t33_650M_UR50S | [link](https://huggingface.co/facebook/esm1b_t33_650M_UR50S) |
+| esm1v_t33_650M_UR90S_1 | [link](https://huggingface.co/facebook/esm1v_t33_650M_UR90S_1) |
+| esm1v_t33_650M_UR90S_2 | [link](https://huggingface.co/facebook/esm1v_t33_650M_UR90S_2) |
+| esm1v_t33_650M_UR90S_3 | [link](https://huggingface.co/facebook/esm1v_t33_650M_UR90S_3) |
+| esm1v_t33_650M_UR90S_4 | [link](https://huggingface.co/facebook/esm1v_t33_650M_UR90S_4) |
+| esm1v_t33_650M_UR90S_5 | [link](https://huggingface.co/facebook/esm1v_t33_650M_UR90S_5) |
+| esm2_t6_8M_UR50D | [link](https://huggingface.co/facebook/esm2_t6_8M_UR50D) |
+| esm2_t12_35M_UR50D | [link](https://huggingface.co/facebook/esm2_t12_35M_UR50D) |
+| esm2_t30_150M_UR50D | [link](https://huggingface.co/facebook/esm2_t30_150M_UR50D) |
+| esm2_t33_650M_UR50D | [link](https://huggingface.co/facebook/esm2_t33_650M_UR50D) |
+| esm2_t36_3B_UR50D | [link](https://huggingface.co/facebook/esm2_t36_3B_UR50D) |
+| esm2_t48_15B_UR50D | [link](https://huggingface.co/facebook/esm2_t48_15B_UR50D) |
+
+**Note that**: For those who cannot access the huggingface model hub, you can download the models from the [facebookresearch/esm](https://github.com/facebookresearch/esm).
+
+We recommend you put the downloaded models in the `Model` directory, but this is not compulsory. No matter where you put the models, you should change the specified model path in the `rank_all.py`.
 
 ## Create single mutations
 
