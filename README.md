@@ -4,6 +4,15 @@ Code for paper: 📖**Protein language models-assisted optimization of a uracil-
 
 DOI: 🔗[https://doi.org/10.1016/j.molcel.2024.01.021](https://doi.org/10.1016/j.molcel.2024.01.021)
 
+```
+@article{he2024protein,
+  title={Protein language models-assisted optimization of a uracil-N-glycosylase variant enables programmable T-to-G and T-to-C base editing},
+  author={He, Yan and Zhou, Xibin and Chang, Chong and Chen, Ge and Liu, Weikuan and Li, Geng and Fan, Xiaoqi and Sun, Mingsun and Miao, Chensi and Huang, Qianyue and others},
+  journal={Molecular Cell},
+  year={2024},
+  publisher={Elsevier}
+}
+```
 ## Install enviroment
 
 Install the conda environment refering to the `env.sh` script. 
