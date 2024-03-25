@@ -51,7 +51,7 @@ First, rank your own data by feeding it into the `rank_all.py` script.
 Note that you should change the `--sequence-file` and `--output-file` arguments to your own data.
 
 ```bash
-python rank_all.py --sequence-file data/datadir/filename.fa --rank-strategy esm1v_5 --output-file data/datadir/filename_mutate_one_allsites.csv --model-name esm2_t33_650M_UR50D --single-site -f
+python rank_all.py --sequence-file data/datadir/filename.fa --rank-strategy esm1v_5 --output-file data/datadir/filename_mutate_one_allsites.csv --model-name esm2_t48_15B_UR50D --single-site -f
 ```
 
 Then, you can generate the landscape of your data by feeding it into the `generate_landscape.py` script.
