@@ -348,6 +348,7 @@ def rank_for_WildtypeMP(model, alphabet, seq, sites, sequence_number, reverse, s
     if isinstance(converter, EsmTokenizer):
         tokens = converter([("", seq)])["input_ids"]
         tokens = torch.Tensor(tokens).long()
+        tokens = torch.cat([tokens[:, 0:1], tokens[:, 2:]], dim=1)
     else:
         _, _, tokens = converter([("", seq)])
     if torch.cuda.is_available():
