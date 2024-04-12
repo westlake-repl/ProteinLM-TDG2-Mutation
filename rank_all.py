@@ -50,9 +50,11 @@ def main(args):
     print("loading model", flush=True)
     if args.checkpoint is None:
         try:
+            print("traditional path", flush=True)
             model_name = Path("/path/to/esm/models/"+args.model_name+".pt")
             model, alphabet = esm.pretrained.load_model_and_alphabet(str(model_name))
         except:
+            print("huggingface path", flush=True)
             model_name = Path("/path/to/huggingface/models/"+args.model_name)
             model = EsmForMaskedLM.from_pretrained(model_name)
             alphabet = AutoTokenizer.from_pretrained(model_name)

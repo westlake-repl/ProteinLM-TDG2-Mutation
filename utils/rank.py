@@ -109,6 +109,7 @@ def rank_for_MaskMP_A(model, alphabet, seq, sites, sequence_number, reverse, sin
     if isinstance(converter, EsmTokenizer):
         mask_tokens = converter([("", masked_sequence)])["input_ids"]
         mask_tokens = torch.Tensor(mask_tokens).long()
+        mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
     else:
         _, _, mask_tokens = converter([("", masked_sequence)])
     if torch.cuda.is_available() and not isinstance(mask_tokens, str):
@@ -165,6 +166,7 @@ def rank_for_MaskMP_B(model, alphabet, seq, sites, sequence_number, reverse, sin
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", masked_sequence)])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", masked_sequence)])
         print(masked_sequence)
@@ -197,6 +199,7 @@ def rank_for_MaskMP_B(model, alphabet, seq, sites, sequence_number, reverse, sin
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])
         if torch.cuda.is_available():
@@ -254,6 +257,7 @@ def rank_for_MaskMP_C(model, alphabet, seq, sites, sequence_number, reverse, sin
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])
         
@@ -305,6 +309,7 @@ def rank_for_MutantMP(model, alphabet, seq, sites, sequence_number, reverse, sin
         if isinstance(converter, EsmTokenizer):
             mutant_tokens = converter([("", mutant_sequence)])["input_ids"]
             mutant_tokens = torch.Tensor(mutant_tokens).long()
+            mutant_tokens = torch.cat([mutant_tokens[:, 0:1], mutant_tokens[:, 2:]], dim=1)
         else:
             _, _, mutant_tokens = converter([("", mutant_sequence)])
         if torch.cuda.is_available():
@@ -408,6 +413,7 @@ def rank_for_AutoRegressive_A(model, alphabet, seq, sites, sequence_number, reve
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])
         if torch.cuda.is_available():
@@ -456,6 +462,7 @@ def rank_for_AutoRegressive_B(model, alphabet, seq, sites, sequence_number, reve
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", masked_sequence)])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", masked_sequence)])
         
@@ -483,6 +490,7 @@ def rank_for_AutoRegressive_B(model, alphabet, seq, sites, sequence_number, reve
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])
         
@@ -539,6 +547,7 @@ def rank_for_AutoRegressive_C(model, alphabet, seq, sites, sequence_number, reve
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])
         
@@ -591,6 +600,7 @@ def rank_for_AutoRegressive_D(model, alphabet, seq, sites, sequence_number, reve
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", masked_sequence)])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", masked_sequence)])
         
@@ -619,6 +629,7 @@ def rank_for_AutoRegressive_D(model, alphabet, seq, sites, sequence_number, reve
         if isinstance(converter, EsmTokenizer):
             mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])["input_ids"]
             mask_tokens = torch.Tensor(mask_tokens).long()
+            mask_tokens = torch.cat([mask_tokens[:, 0:1], mask_tokens[:, 2:]], dim=1)
         else:
             _, _, mask_tokens = converter([("", mutant_masked_sequence) for mutant_masked_sequence in mutant_masked_sequence_list])
         
