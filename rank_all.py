@@ -15,8 +15,8 @@ def parse_args_rank_all(argument_list=None):
     parser.add_argument('--output-file', type=str, required=True, help="output file")
     parser.add_argument('--reverse', action='store_true', help="whether to reverse the sequence")
     parser.add_argument('--gt-file', type=str, default=None, help="ground truth file")
-    parser.add_argument("--single-site", action="store_true", default=False, help="only rank for single site")
-    parser.add_argument("-f", "--force-overwrite", action="store_true", default=False, help="force overwrite")
+    parser.add_argument("--single-site", action="store_true", default=True, help="only rank for single site")
+    parser.add_argument("-f", "--force-overwrite", action="store_true", default=True, help="force overwrite")
     if argument_list is None:
         return parser.parse_args()
     else:
